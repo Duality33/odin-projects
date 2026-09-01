@@ -1,3 +1,6 @@
+let humanScore = 0;
+let computerScore = 0;
+
 // object of choices
 const choices = {
     0: "rock",
@@ -10,5 +13,11 @@ function getComputerChoice(){
     const random = Math.floor(Math.random() * 3);
     return choices[random]; // returns the choice (index) of the 'random' const,
 }
+// prompts the user to select one of the choices given
+const input = prompt("Rock, paper or scissors? Select one:");
 
-console.log(getComputerChoice());
+function getHumanChoice(){
+    return input; // self-explanatory
+}
+
+console.log(getHumanChoice(input))
