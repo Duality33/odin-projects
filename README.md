@@ -1,0 +1,1 @@
+This file (or repo) contains all projects TOD (The Odin Project) has given to me, although, it only contains backend projects because I can't fix flexboxes :D
