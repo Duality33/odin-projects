@@ -10,13 +10,14 @@ function playGame() {
         const random = Math.floor(Math.random() * 3);
         return choices[random]; // returns the choice (index) of the 'random' const,
     }
-    // prompts the user to select one of the choices given
-    const input = prompt("Rock, paper or scissors? Select one:");
     // scores
     let humanScore = 0;
     let computerScore = 0;
-
+    
     function getHumanChoice(){
+        // prompts the user to select one of the choices given
+        const input = prompt("Rock, paper or scissors? Select one:");
+
         switch(input.toLowerCase()) {
             case "rock":
                 return choices[0]
@@ -29,8 +30,12 @@ function playGame() {
         }
     }
     
-    const humanChoiceVar = getHumanChoice();
-    const computerChoiceVar = getComputerChoice();
+    for (let i = 0; i < 5; i++) {
+        const humanChoice = getHumanChoice();
+        const computerChoice = getComputerChoice();
+    
+        console.log(playRound(humanChoice, computerChoice));
+    }
     // choices[0] = rock
     // choices[1] = paper
     // choices[2] = scissors
@@ -54,12 +59,7 @@ function playGame() {
             return "The computer won"
         }
     }
-    
-    console.log(playRound(humanChoiceVar, computerChoiceVar));
-    console.log(playRound(humanChoiceVar, computerChoiceVar));
-    console.log(playRound(humanChoiceVar, computerChoiceVar));
-    console.log(playRound(humanChoiceVar, computerChoiceVar));
-    console.log(playRound(humanChoiceVar, computerChoiceVar));
-    
 }
+
+playGame();
 
