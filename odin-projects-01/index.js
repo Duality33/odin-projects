@@ -59,8 +59,7 @@ function playGame() {
         const computerChoice = getComputerChoice();
         
         console.log(playRound(humanChoice, computerChoice));
-        }
+    }
 }
 
 playGame();
-
