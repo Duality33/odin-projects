@@ -30,12 +30,6 @@ function playGame() {
         }
     }
     
-    for (let i = 0; i < 5; i++) {
-        const humanChoice = getHumanChoice();
-        const computerChoice = getComputerChoice();
-    
-        console.log(playRound(humanChoice, computerChoice));
-    }
     // choices[0] = rock
     // choices[1] = paper
     // choices[2] = scissors
@@ -59,6 +53,13 @@ function playGame() {
             return "The computer won"
         }
     }
+    // for loop that runs after the user submits either 'rock', 'paper' or 'scissors', which lets them choose another one of the three, then randomly selects for the computer
+    for (let i = 0; i < 5; i++) {
+        const humanChoice = getHumanChoice();
+        const computerChoice = getComputerChoice();
+        
+        console.log(playRound(humanChoice, computerChoice));
+        }
 }
 
 playGame();
