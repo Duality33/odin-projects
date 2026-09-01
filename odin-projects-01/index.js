@@ -7,12 +7,9 @@ const choices = {
     1: "paper",
     2: "scissors"
 };
-
-// random choice generator (in global scope just in case its needed)
-const random = Math.floor(Math.random() * 3);
-
 // function uses 'Math.random() * 3', which is 'Start from 0 and end before 3 (the max given)', kind of.
 function getComputerChoice(){
+    const random = Math.floor(Math.random() * 3);
     return choices[random]; // returns the choice (index) of the 'random' const,
 }
 // prompts the user to select one of the choices given
